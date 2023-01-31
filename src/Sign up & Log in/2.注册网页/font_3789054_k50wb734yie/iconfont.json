@@ -1,0 +1,30 @@
+{
+  "id": "3789054",
+  "name": "My Icon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6756281",
+      "name": "加号",
+      "font_class": "jiahao1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "650753",
+      "name": "感叹号",
+      "font_class": "gantanhao",
+      "unicode": "e61d",
+      "unicode_decimal": 58909
+    },
+    {
+      "icon_id": "2076325",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e8a4",
+      "unicode_decimal": 59556
+    }
+  ]
+}
