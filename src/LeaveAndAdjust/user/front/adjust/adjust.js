@@ -128,11 +128,11 @@ function isconfirm() {
 
 
 //偷来的接口,获取当前时间
-var time = document.getElementById('time');
+// var time = document.getElementById('time');
 
-function getTime() {
-    axios.get('https://api.reginvolver.cn//common/time').then((res) => {
-        time.innerHTML = '当前时间为:' + `${res.data}`;
-    });
-}
-setInterval(getTime, 1000);
+// function getTime() {
+//     axios.get('https://api.reginvolver.cn//common/time').then((res) => {
+//         time.innerHTML = '当前时间为:' + `${res.data}`;
+//     });
+// }
+// setInterval(getTime, 1000);

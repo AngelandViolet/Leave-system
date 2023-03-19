@@ -1,27 +1,37 @@
 a {
     text-decoration: none;
 }
-*{
+
+* {
     margin: 0;
 }
-.all{
-    margin: auto;
-    width: 1920px;
+
+
+
+.all {
+    margin: 0 auto;
+    width: 98vw;
     box-shadow: 0 0 30px 20px rgba(0, 0, 0, .3);
-        background-image: linear-gradient(to bottom, #ffffff, #9fbfd6, #427da7);
-        border-radius: 5px;
-   
+    background-image: linear-gradient(to bottom, #ffffff, #9fbfd6, #427da7);
+    border-radius: 5px;
+
 
 }
+
 a:hover {
     color: blue;
 }
 
 input {
+    border-radius: 10px;
     border: 0px;
-
+    outline: none;
 }
 
+
+select {
+    border-radius: 10px;
+}
 
 .top {
     position: relative;
@@ -67,7 +77,7 @@ input {
     color: rgba(0, 0, 0, 0.3);
 }
 
-.top-right-1 {
+/* .top-right-1 {
     position: absolute;
     width: 110px;
     height: 110px;
@@ -93,6 +103,39 @@ input {
     text-align: center;
 
     color: #000000;
+} */
+
+.top-right-1 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    right: 267px;
+    top: 11px;
+    border-radius: 55px;
+    background: #D9D9D9;
+
+
+}
+
+.top-right-1:hover {
+    transform: scale(0.9);
+    transition-duration: 0.7s;
+}
+
+.top-right-1-text {
+
+    position: relative;
+    width: 110px;
+    height: 110px;
+    /* right: 267px;
+        top: 12px; */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    color: #000000;
 }
 
 .top-right-2 {
@@ -115,57 +158,129 @@ input {
 
 .content {
     position: relative;
-    width: 100%;
     margin: auto;
     height: 948px;
-    
-   
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-    }
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
 
 
 
 
 .cause {
-position: absolute;
+    display: inline-block;
     width: 288px;
     height: 58px;
-    left: 483px;
-    top: 245px;
-
+    padding-left: 50px;
+    padding-right: 50px;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 100;
+    font-weight: bold;
     font-size: 48px;
     line-height: 58px;
     /* identical to box height */
-
     text-align: center;
-
     color: black;
 }
 
 .cause-text {
+    padding-left: 20px;
+    display: inline-block;
+    width: 463px;
+    height: 60px;
+    margin-left: 50px;
+    background: #D9D9D9;
+}
+
+.centerh {
     position: absolute;
-        width: 483px;
-        height: 60px;
-        left: 923px;
-        top: 249px;
-    
-        background: #D9D9D9;
+    height: 100px;
+    width: 1000px;
+    top: 245px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    /* background-color: black; */
+}
+
+.centerhh {
+    position: absolute;
+    height: 100px;
+    width: 1000px;
+    top: 379px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    /* background-color: black; */
 }
 
 .date-from {
-position: absolute;
+    display: inline-block;
     width: 336px;
     height: 58px;
-    left: 483px;
-    top: 379px;
+    padding-left: 50px;
 
     font-family: 'Inter';
     font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    /* identical to box height */
+
+    text-align: center;
+    opacity: 0.8;
+    color: black;
+
+}
+
+#date-from-text {
+    display: inline-block;
+    margin-left: 50px;
+    width: 230px;
+    height: 60px;
+    left: 923px;
+    top: 377px;
+    font-size: 30px;
+    opacity: 0.8;
+    background: #D9D9D9;
+}
+
+#date-text1 {
+    margin-left: 50px;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    left: 1203px;
+    top: 377px;
+    font-size: 30px;
     font-weight: 100;
+    background: #D9D9D9;
+    opacity: 0.9;
+}
+
+
+
+.centerhhh {
+    position: absolute;
+    height: 100px;
+    width: 1000px;
+    top: 513px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    /* background-color: black; */
+}
+
+.date-to {
+    display: inline-block;
+    width: 336px;
+    height: 58px;
+    padding-left: 35px;
+    opacity: 0.8;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
     font-size: 48px;
     line-height: 58px;
     /* identical to box height */
@@ -173,74 +288,42 @@ position: absolute;
     text-align: center;
 
     color: black;
-   
-}
-#date-from-text{
-    position: absolute;
-        width: 230px;
-        height: 60px;
-        left: 923px;
-        top: 377px;
-        font-size: 30px;
-    
-        background: #D9D9D9;
-}
-#date-text1{
-    position: absolute;
-        width: 200px;
-        height: 60px;
-        left: 1203px;
-        top: 377px;
-        font-size: 30px;
-    
-        background: #D9D9D9;
-        opacity: 0.85;
-}
-.date-to{
-    position: absolute;
-        width: 336px;
-        height: 58px;
-        left: 483px;
-        top: 513px;
-    
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 100;
-        font-size: 48px;
-        line-height: 58px;
-        /* identical to box height */
-    
-        text-align: center;
-    
-        color: black;
 
 }
-#date-to-text{
-    position: absolute;
-        width: 230px;
-        height: 60px;
-        left: 923px;
-        top: 512px;
-        font-size: 30px;
-        background: #D9D9D9;
+
+#date-to-text {
+    margin-left: 50px;
+    display: inline-block;
+    width: 230px;
+    height: 60px;
+    left: 923px;
+    top: 512px;
+    font-size: 30px;
+    background: #D9D9D9;
+    opacity: 0.8;
 }
 
 
-#date-text2{
-    position: absolute;
-        width: 200px;
-        height: 60px;
-        left: 1203px;
-        top: 512px;
-        font-size: 30px;
-        background: #D9D9D9;
-        opacity: 0.85;
+#date-text2 {
+    margin-left: 50px;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    left: 1203px;
+    top: 512px;
+    font-size: 30px;
+    background: #D9D9D9;
+    opacity: 0.85;
+    font-weight: 100;
+
 }
+
 button {
     position: absolute;
     width: 250px;
     height: 96px;
-    left: 819px;
+    left: 50%;
+    margin-left: -125px;
     top: 719px;
     background: #604242;
     font-family: 'Inter';
@@ -248,11 +331,17 @@ button {
     font-weight: 100;
     font-size: 48px;
     color: white;
+    transition: all 1.5s;
 }
 
 button:hover {
-    opacity: 0.9;
     cursor: pointer;
+    background-color: #ffffff;
+    color: #01396c;
+    border: solid 5px #01396c;
+    transform: scale(0.9);
+    transition-duration: 0.7s;
+
 }
 
 .confirm :hover {
@@ -268,6 +357,7 @@ button:hover {
 
     background: #D9D9D9;
 }
+
 #time {
 
     display: inline-block;
@@ -275,6 +365,7 @@ button:hover {
     height: 50px;
     font-size: 30px;
 }
+
 .change {
 
     position: absolute;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -7,57 +8,62 @@
     <title>请假页面</title>
     <link rel="stylesheet" href="leave.css">
 </head>
+
 <body>
-    
+
     <div class="all">
         <div class="alld">
-    <div class="top">
-        <div class="change"></div>
-        <a class="change-text" href="../adjust/adjust.html">切换</a>
-        <div class="top-left-1">请假系统</div>
-        <a class="top-left-2" href="../adjust/adjust.html" > </a>
-        <a class="top-right-1" href="#"></a>
-        <a class="top-right-1-text" href="#">云</a>
-        <a class="top-right-2" href="#">（个人信息页面）</a>
-        
-    </div>
-    <div class="content">
-        <div  id="time"></div>
-        <!-- <div class="name">姓名</div>
+            <div class="top">
+                <div class="change"></div>
+                <a class="change-text" href="../adjust/adjust.html">切换</a>
+                <div class="top-left-1">请假系统</div>
+                <a class="top-left-2" href="../adjust/adjust.html"> </a>
+                <a class="top-right-1" href="#">
+                    <img src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/头像.png" class="top-right-1-text">
+                </a>
+                <!-- <a class="top-right-1-text" href="#"></a> -->
+
+                <a class="top-right-2" href="#">（个人信息页面）</a>
+
+            </div>
+            <div class="content">
+                <div id="time"></div>
+                <!-- <div class="name">姓名</div>
         <input class="name-text" type="text"  style="font-size: 30px" id="name" placeholder="请输入姓名">
         <div class="direction">方向</div> 
         <input class="direction-text" type="text" style="font-size: 30px" id="direction" placeholder="例如：设计">
         <div class="number">期数</div>
         <input class="number-text" type="text" style="font-size: 30px" id="number" placeholder="例如：七期"> -->
-       <div class="centerh">
-        <div class="cause">请假原因</div>
-        <input class="cause-text" type="text" style="font-size: 30px" id="cause" placeholder="例如：感冒休息">
-        </div>
-        <div class="centerhh">
-        <div class="date">请假时间</div> 
-        <input id="date-text" type="date">
-        <select id="date-text1">
-            <!-- <option selected="selected" disabled="disabled" style='display: none' value=''></option> -->
+                <div class="centerh">
+                    <div class="cause">请假原因</div>
+                    <input class="cause-text" type="text" style="font-size: 30px" id="cause" placeholder="例如：感冒休息">
+                </div>
+                <div class="centerhh">
+                    <div class="date">请假时间</div>
+                    <input id="date-text" type="date">
+                    <select id="date-text1">
+                        <!-- <option selected="selected" disabled="disabled" style='display: none' value=''></option> -->
 
-            <option>第一大节</option>
-            <option>第二大节</option>
-            <option>第三大节</option>
-            <option>第四大节</option>
-        </select>
-        
-        </div>
-        
-        <button class="confirm" id="confirm" onclick="isconfirm()">确 认</button>
-        <!-- <div class="confirm-again">
+                        <option>第一大节</option>
+                        <option>第二大节</option>
+                        <option>第三大节</option>
+                        <option>第四大节</option>
+                    </select>
+
+                </div>
+
+                <button class="confirm" id="confirm" onclick="isconfirm()">确 认</button>
+                <!-- <div class="confirm-again">
             <div class="confirm-again-1">是否确认请假？</div>
             <button id="yes">确认</button>
             <button id="no">我再想想</button>
         </div> -->
+            </div>
+        </div>
     </div>
-    </div>
-    </div>
-    
+
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./leave.js"></script>
+
 </html>
