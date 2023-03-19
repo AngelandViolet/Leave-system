@@ -1,0 +1,23 @@
+{
+  "id": "3949827",
+  "name": "PersonalWeb",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8309469",
+      "name": "头像-02",
+      "font_class": "touxiang-",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "34553849",
+      "name": "shangxiashixinjiantou-copy",
+      "font_class": "shangxia-copy",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    }
+  ]
+}
