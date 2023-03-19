@@ -333,10 +333,16 @@ label img {
 }
 
 #logo_Y {
+    width: 12vw;
+    height: 12vw;
+    position: fixed;
+    top: 1vw;
+    left: 0.1vw;
+}
+
+#logo_X {
     width: 150px;
     height: 150px;
-    position: relative;
-    top: -10px;
-    right: 530px;
-    opacity: ;
+    position: absolute;
+    top: 15px;
 }

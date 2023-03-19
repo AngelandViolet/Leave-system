@@ -71,15 +71,15 @@ function login() {
     else if (SignIn_password.value =='') {
         alert("请输入密码");
     }
-    axios({
-        method: 'GET',
-        url: '/user/user_log'
-    }).then(res => {
-        alert('第二次登陆')
+    // axios({
+    //     method: 'GET',
+    //     url: '/user/user_log'
+    // }).then(res => {
+    //     alert('第二次登陆')
         
-    }).catch(err => {
-        console.log(err.response.status)
-        if (err.response.status == 403) {
+    // }).catch(err => {
+    //     console.log(err.response.status)
+    //     if (err.response.status == 403) {
             axios({
                 url: '/user/user_log',
                 method: 'POST',
@@ -91,10 +91,11 @@ function login() {
 		.then(res => {
 			if(res.status==200)
 			{
-                alert("第一次登录成功")
-                console.log(res)
-                console.log(document.cookie)
-				// window.location.href="../leave/leave.html";
+                alert("登录成功")
+                // console.log(res)
+                // console.log(document.cookie)
+                window.location.href = "   ";
+                localStorage.setItem('id', `${SignIn_StudentID.value}`);
 			}
 			else if(res.status==201)
 			{
@@ -106,10 +107,10 @@ function login() {
 			}
 		})
         }
-        })
+        // })
     
-}
-localStorage.setItem('id', `${SignIn_StudentID}`);
+// }
+
 
 //注册界面
 function sign() {
@@ -169,7 +170,8 @@ function sign() {
             .then((res) => {  
                 if (res.status == 200){
                     // setTimeout(function () {window.open("../login/login.html","_self")}, 1000);
-					alert("注册完成！点击跳转到登录页面...");
+                    alert("注册完成！");
+                    container.classList.remove("right-panel-active");
                 }
                 if (res.status != 200) {
                     alert("邀请码错误，请重新输入");
