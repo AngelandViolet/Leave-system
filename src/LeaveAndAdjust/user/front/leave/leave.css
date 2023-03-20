@@ -1,6 +1,7 @@
 /* 头部部分 */
 *{
     margin: 0;
+    padding: 0;
 }
 a{
     text-decoration: none;
@@ -17,7 +18,7 @@ select{
     border-radius: 10px;
 }
 .all{
-    width: 98vw;
+    width: 100vw;
     height: 52vw;
     opacity: 0.95;
     margin:  0 auto;

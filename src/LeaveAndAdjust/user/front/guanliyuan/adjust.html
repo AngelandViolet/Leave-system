@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员调整研学端</title>
+    <style>
+        .all{
+            width: 1920px;
+            margin: auto;
+            background-image: linear-gradient(to bottom, #6190E8, #A7BFE8);
+            
+        }
+        .top{
+            position: relative;
+            width: 1910px;
+            height: 120px;
+            /* background-color: #f1ca17; */
+            border: 5px solid #2f90b9;
+            
+
+        }
+        .top-1{
+                position: absolute;
+                top:30px;
+                left: 160px;
+                 font-size: 36px;
+                
+
+        }
+        .top-2{
+             position: absolute;
+                top:30px;
+                left: 460px;
+                 font-size: 36px;
+
+        }
+        .Main {
+            border: 5px solid #2f90b9;
+            border-top: none;
+    width: 1910px;
+    
+}
+
+table {
+    height: 800px;
+    width: 1750px;
+    margin:  auto 20px;
+    max-height: 800px;
+    font-size: 36px;
+   
+}
+
+thead tr {
+    display: block;
+    width: 1750px;
+}
+
+tbody {
+    display: block;
+    width: 1750px;
+    height: 750px;
+    max-height: 750px;
+    overflow: auto;
+}
+
+th {
+    width: 350px;
+    height: 45px;
+    text-align: center;
+}
+
+td {
+    width: 350px;
+    height: 45px;
+    border: 0px;
+    text-align: center;
+}
+    </style>
+</head>
+
+<body>
+    <div class="all">
+    <div class="top">
+        <div class="top-1">当前</div>
+        <div class="top-2">调整研学情况</div>
+
+    </div>
+    <div class="Main">
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>方向</th>
+                    <th>调整前时间</th>
+                    <th>调整后时间</th>
+                    <th>调整原因</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="tr"></tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+</body>
+<script src="./adjust.js"></script>
+
+</html>

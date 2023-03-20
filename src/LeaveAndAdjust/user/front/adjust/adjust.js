@@ -88,6 +88,7 @@ function isconfirm() {
         axios({
             method: 'post',
             url: 'http://6xa4kvxq.shenzhuo.vip:47020/excused/',
+            headers: { "Content-type": "application/json" },
             data: {
                 reason: `${cause}`,
                 old_date: `${from}`,
@@ -107,8 +108,8 @@ function isconfirm() {
     if (index && indexd) {
         axios({
             method: 'get',
-            url: 'http://6xa4kvxq.shenzhuo.vip:47020/api/getdata/'
-
+            url: 'http://6xa4kvxq.shenzhuo.vip:47020/api/getdata/',
+            headers: { "Content-type": "application/json" },
 
         }).then((res) => { console.log(res.data.username); })
 

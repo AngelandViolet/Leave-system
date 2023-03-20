@@ -84,6 +84,7 @@ function isconfirm(){
     
     if (index&&indexd) {
         axios({
+            headers: { "Content-type": "application/json" },
             method: 'post',
             url: 'http://6xa4kvxq.shenzhuo.vip:47020/excused/',
             data: {
@@ -103,6 +104,7 @@ function isconfirm(){
     }
     if (index&&indexd) {
         axios({
+            headers: { "Content-type": "application/json" },
             method: 'get',
             url: 'http://6xa4kvxq.shenzhuo.vip:47020/api/getdata/'
 

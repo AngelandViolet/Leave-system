@@ -9,7 +9,7 @@ a {
 
 .all{
     margin: 0 auto;
-    width: 98vw;
+    width: 100vw;
     box-shadow: 0 0 30px 20px rgba(0, 0, 0, .3);
         background-image: linear-gradient(to bottom, #ffffff, #9fbfd6, #427da7);
         border-radius: 5px;
