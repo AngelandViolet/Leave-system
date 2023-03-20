@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+
+
+    <title>调整研学页面</title>
+
+    <link rel="stylesheet" href="adjust.css">
+</head>
+
+<body>
+<div class="alld">
+<div class="all">
+    <div class="top">
+        <div class="top-left-1">调整研学系统</div>
+        <div class="change"></div>
+        <a class="change-text" href="../leave/leave.html">切换</a>
+        <!-- <a class="top-left-2" href="../leave/leave.html">（点击切换为请假系统）</a> -->
+        <a class="top-right-1" href="#">
+            <img src="https://xuejiangbin.oss-cn-beijing.aliyuncs.com/头像.png" class="top-right-1-text">
+        </a>
+        
+        <a class="top-right-2" href="#">（个人信息页面）</a>
+    </div>
+    <div class="content">
+        <!-- <div class="time" id="time"></div> -->
+        <div class="centerh">
+        <div class="cause">调整原因</div>
+        <input class="cause-text" type="text" style="font-size: 30px" 
+        id="cause" placeholder="例如：感冒休息">
+        </div>
+
+        <div class="centerhh">
+        <div class="date-from">调整前时间</div>
+        <input id="date-from-text" type="date">
+        <select id="date-text1">
+            <option>第一大节</option>
+            <option>第二大节</option>
+            <option>第三大节</option>
+            <option>第四大节</option>
+        </select>
+        </div>
+
+
+        <div class="centerhhh">>
+        <div class="date-to">调整后时间</div>
+        <input id="date-to-text" type="date">
+        <select id="date-text2">
+            <option>第一大节</option>
+            <option>第二大节</option>
+            <option>第三大节</option>
+            <option>第四大节</option>
+        </select>
+        </div>
+
+
+
+        <button class="confirm" id="confirm" onclick="isconfirm()">确   认</button>
+       
+                            
+
+    </div>
+</div>
+</div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js">
+</script>
+<script src="./adjust.js"></script>
+
+</html>
