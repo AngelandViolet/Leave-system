@@ -56,8 +56,8 @@ SignUp_eye.onclick = function () {
 }
 
 //登录界面
-axios.defaults.baseURL = 'http://gaosu.shenzhuo.vip:50003';
-// axios.defaults.withCredentials = true
+axios.defaults.baseURL = 'https://zkr.shenzhuo.vip';
+axios.defaults.withCredentials = true;
 
 //获取各种元素
 var SignIn_StudentID = document.getElementById('SignIn_StudentID');
@@ -71,15 +71,16 @@ function login() {
     else if (SignIn_password.value =='') {
         alert("请输入密码");
     }
-    // axios({
-    //     method: 'GET',
-    //     url: '/user/user_log'
-    // }).then(res => {
-    //     alert('第二次登陆')
-        
-    // }).catch(err => {
-    //     console.log(err.response.status)
-    //     if (err.response.status == 403) {
+    axios({
+        method: 'GET',
+        url: '/user/user_log'
+    }).then(res => {
+        alert('登录成功')
+        window.location.href = "   ";
+        localStorage.setItem('id', `${SignIn_StudentID.value}`);
+    }).catch(err => {
+        console.log(err.response.status)
+        if (err.response.status == 403) {
             axios({
                 url: '/user/user_log',
                 method: 'POST',
@@ -107,9 +108,9 @@ function login() {
 			}
 		})
         }
-        // })
+        })
     
-// }
+}
 
 
 //注册界面
@@ -169,7 +170,6 @@ function sign() {
     })
             .then((res) => {  
                 if (res.status == 200){
-                    // setTimeout(function () {window.open("../login/login.html","_self")}, 1000);
                     alert("注册完成！");
                     container.classList.remove("right-panel-active");
                 }
