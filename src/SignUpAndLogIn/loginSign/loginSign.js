@@ -55,14 +55,14 @@ SignUp_eye.onclick = function () {
     }
 }
 
-//登录界面
 axios.defaults.baseURL = 'https://zkr.shenzhuo.vip';
 axios.defaults.withCredentials = true;
 
-//获取各种元素
+// 获取各种元素
 var SignIn_StudentID = document.getElementById('SignIn_StudentID');
 var SignIn_password = document.getElementById('SignIn_password');
 
+// 用户登录界面
 function login() {
     if (SignIn_StudentID.value =='') {
         alert("请输入账号");
@@ -76,6 +76,7 @@ function login() {
         url: '/user/user_log'
     }).then(res => {
         alert('登录成功')
+        //跳转至请假界面
         window.location.href = "   ";
         localStorage.setItem('id', `${SignIn_StudentID.value}`);
     }).catch(err => {
@@ -95,6 +96,7 @@ function login() {
                 alert("登录成功")
                 // console.log(res)
                 // console.log(document.cookie)
+                //跳转至请假界面
                 window.location.href = "   ";
                 localStorage.setItem('id', `${SignIn_StudentID.value}`);
 			}
@@ -113,7 +115,7 @@ function login() {
 }
 
 
-//注册界面
+// 用户注册界面
 function sign() {
     //获取元素
     var name = document.getElementById('name');
@@ -178,4 +180,36 @@ function sign() {
                 }
     })
     }
+}
+
+
+// 管理员登录界面
+function login() {
+    if (SignIn_StudentID.value == '') {
+        alert("请输入账号");
+    }
+    
+    else if (SignIn_password.value == '') {
+        alert("请输入密码");
+    }
+    axios({
+        url: '/manager/manager_log',
+        method: 'POST',
+        data: {
+            "manager_id":`${SignIn_StudentID.value}`,
+            "manager_pass": `${SignIn_password.value}`,
+        }
+    }).then(res => {
+			if(res.status==200)
+			{
+                alert("登录成功")
+                //此处跳转至管理端
+                window.location.href = "   ";
+                localStorage.setItem('id', `${SignIn_StudentID.value}`);
+			}
+			else if(res.status==201)
+			{
+				alert("账号或密码错误,请重新输入")
+			}
+		})
 }
