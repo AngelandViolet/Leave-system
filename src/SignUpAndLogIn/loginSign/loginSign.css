@@ -174,7 +174,7 @@ body {
     text-transform: uppercase;
     transition: transform 80ms ease-in;
     width: 150px;
-    height: 50px;
+    height: 45px;
 }
 
 #SignUp_btn {
@@ -229,6 +229,8 @@ body {
     font-weight: 300;
     text-align: center;
     vertical-align: top;
+    border-radius: 20px;
+    opacity: 70%;
 }
 
 .SignUp_input {
@@ -244,6 +246,8 @@ body {
     font-weight: 300;
     text-align: center;
     vertical-align: top;
+    border-radius: 13px;
+    opacity: 70%;
 }
 
 #InvitationCode {
@@ -301,8 +305,8 @@ input[type="password"]::-o-clear {
 
 label img {
     position: absolute;
-    top: 230px;
-    right: 85px;
+    top: 233px;
+    right: 88px;
     width: 20px;
     height: 20px;
     z-index: 1;
@@ -318,13 +322,11 @@ label img {
 }
 
 @keyframes show {
-
     0%,
     49.99% {
         opacity: 0;
         z-index: 1;
     }
-
     50%,
     100% {
         opacity: 1;
@@ -333,10 +335,16 @@ label img {
 }
 
 #logo_Y {
+    width: 12vw;
+    height: 12vw;
+    position: fixed;
+    top: 1vw;
+    left: 0.1vw;
+}
+
+#logo_X {
     width: 150px;
     height: 150px;
-    position: relative;
-    top: -10px;
-    right: 530px;
-    opacity: ;
+    position: absolute;
+    top: 15px;
 }

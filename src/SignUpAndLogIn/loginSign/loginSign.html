@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="loginSign.css">
     <title>Document</title>
 </head>
-<body>
-    <!-- <img src="https://lmy-2.oss-cn-beijing.aliyuncs.com/IMG_20230319_205636.jpg" alt="" id="logo_Y"> -->
-    <div class="container right-panel-active">
+<body style="overflow:hidden">
+    <img src="https://lmy-2.oss-cn-beijing.aliyuncs.com/9862A9BCBB5FAF122B15198E52694609%20%E6%8B%B7%E8%B4%9D(1).png" alt="" id="logo_Y">
+    <div class="container">
+        <!-- 登录界面 -->
+        <div class="container__form container--signin">
+            <form action="#" class="form" id="SignIn_form">
+                <h2 class="form__title">登录</h2>
+                <input type="text" id="SignIn_StudentID" placeholder="账号" class="SignIn_input">
+                <label for=""><img src="https://lmy-2.oss-cn-beijing.aliyuncs.com/yanjing-bi.png" alt=""
+                        id="SignIn_eye"></label>
+                <input type="password" id="SignIn_password" placeholder="密码" class="SignIn_input">
+                <button class="btn" onclick="login()">登录</button>
+            </form>
+        </div>
+
         <!-- 注册界面 -->
         <div class="container__form container--signup">
             <form action="#" class="SignUp_form" id="SignUp_form">
@@ -32,26 +44,16 @@
                 <button class="btn" id="SignUp_btn" onclick="sign()">注册</button>
             </form>
         </div>
-    
-        <!-- 登录界面 -->
-        <div class="container__form container--signin">
-            <form action="#" class="form" id="SignIn_form">
-                <h2 class="form__title">登录</h2>
-                <input type="text" id="SignIn_StudentID" placeholder="账号" class="SignIn_input">
-                <label for=""><img src="https://lmy-2.oss-cn-beijing.aliyuncs.com/yanjing-bi.png" alt="" id="SignIn_eye"></label>
-                <input type="password" id="SignIn_password" placeholder="密码" class="SignIn_input">
-                <button class="btn" onclick="login()">登录</button>
-            </form>
-        </div>
-    
+        
         <!-- Overlay -->
         <div class="container__overlay">
             <div class="overlay">
                 <div class="overlay__panel overlay--left">
-                    <img src="" alt="">
+                    <img src="https://lmy-2.oss-cn-beijing.aliyuncs.com/%E8%93%9D%E8%89%B2.png" alt="" id="logo_X">
                     <button class="btn" id="signIn">登录</button>
                 </div>
                 <div class="overlay__panel overlay--right">
+                    <img src="https://lmy-2.oss-cn-beijing.aliyuncs.com/%E8%93%9D%E8%89%B2.png" alt="" id="logo_X">
                     <button class="btn" id="signUp">注册</button>
                 </div>
             </div>
@@ -59,5 +61,5 @@
     </div>
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="index.js"></script>
+<script src="loginSign.js"></script>
 </html>
