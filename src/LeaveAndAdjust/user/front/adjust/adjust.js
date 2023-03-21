@@ -13,7 +13,7 @@ localStorage.setItem('idd', `${id}`);
 
 
 //判断时间是否合理
-var judged = (judge,date) => {
+var judged = (judge, date) => {
     var dated = new Date();
 
     let day = dated.getDate();
@@ -32,7 +32,7 @@ var judged = (judge,date) => {
 
     var nowdate = year + "-" + month + "-" + day;
     console.log("你选的时间是" + date);
-    
+
     console.log("现在的时间是" + nowdate);
 
     if (date >= nowdate) {
@@ -68,8 +68,8 @@ function isconfirm() {
     var indexd = 0;
     var index = confirm('是否确认调整研学');
     //获取判断时间是否合理
-    var judge1 = judged(result1,from);
-    var judge2 = judged(result2,to);
+    var judge1 = judged(result1, from);
+    var judge2 = judged(result2, to);
 
     //这块是再次确认之后向后端传入信息
     if (cause == '') {
@@ -81,10 +81,10 @@ function isconfirm() {
     if (to == '') {
         alert("调整后时间不能为空");
     }
-    if (!judge1||!judge2) {
+    if (!judge1 || !judge2) {
         alert("调整研学时间不合理，请重新选择研学时间");
     }
-    if (cause != '' && from != '' &&to!='' &&  judge1 && judge2) {
+    if (cause != '' && from != '' && to != '' && judge1 && judge2) {
         indexd = 1;
     }
 
@@ -94,14 +94,14 @@ function isconfirm() {
             url: 'https://zkr.shenzhuo.vip/user/ask_change',
             headers: {
                 "Content-type": "application/json",
-                   },
+            },
             data: {
-                user_id:`${idd}`,
+                user_id: `${idd}`,
                 change_reason: `${cause}`,
                 old_date: `${from}`,
                 new_date: `${to}`,
                 old_class: `${result1}`,
-                new_class:`${result2}`
+                new_class: `${result2}`
             }
 
         }).then((res) => {
@@ -112,12 +112,12 @@ function isconfirm() {
         }).catch(error => {
             alert(error.response.data);
 
-})
-       
-        console.log("已成功调整");
-        
+        })
 
-        
+        console.log("已成功调整");
+
+
+
     }
     if (index && indexd) {
         axios({

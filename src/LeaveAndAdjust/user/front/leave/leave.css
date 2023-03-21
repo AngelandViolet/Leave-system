@@ -1,58 +1,65 @@
 /* 头部部分 */
-*{
+* {
     margin: 0;
     padding: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
-a:hover{
-    color: blue;
+
+a:hover {
+    color: #01396c;
 }
-input{
+
+input {
     border-radius: 10px;
-    border:0px;
+    border: 0px;
     outline: none;
 }
-select{
+
+select {
     border-radius: 10px;
 }
-.all{
+
+.all {
     width: 100vw;
     height: 52vw;
     opacity: 0.95;
-    margin:  0 auto;
+    margin: 0 auto;
 
-  
+
 }
- .alld{
+
+.alld {
     box-shadow: 0 0 30px 20px rgba(0, 0, 0, .3);
     background-image: linear-gradient(to bottom, #ffffff, #9fbfd6, #427da7);
     border-radius: 5px;
-    } 
+}
 
 .top {
     position: relative;
-    width:100%;
+    width: 100%;
     height: 132px;
     left: 0px;
     top: 0px;
     margin: auto;
     background: rgba(255, 255, 255, 0.5);
     /* background: #FFFFFF; */
-    
+
 }
-.change
-{
-      color: #604242;
-        position: absolute;
-        width: 0;
-        height: 0;
-        border: 66px solid;
-        border-color: transparent;
-        border-left-color: skyblue;
+
+.change {
+    color: #604242;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 66px solid;
+    border-color: transparent;
+    border-left-color: skyblue;
 }
-.change-text{
+
+.change-text {
     width: 20px;
     height: 50px;
     left: 8px;
@@ -96,72 +103,74 @@ select{
 
     color: rgba(0, 0, 0, 0.3);
 }
-.top-right-1{
+
+.top-right-1 {
     position: absolute;
-        width: 110px;
-        height: 110px;
-        right: 267px;
-        top: 11px;
-        border-radius: 55px;
-        background: #D9D9D9;
-     
-        
+    width: 110px;
+    height: 110px;
+    right: 267px;
+    top: 11px;
+    border-radius: 55px;
+    background: #D9D9D9;
+
+
 }
-.top-right-1:hover{
+
+.top-right-1:hover {
     transform: scale(0.9);
-        transition-duration: 0.7s;
-
-
-
+    transition-duration: 0.7s;
 }
 
-.top-right-1-text{
+.top-right-1-text {
 
     position: relative;
-        width: 110px;
-        height: 110px;
-        /* right: 267px;
+    width: 110px;
+    height: 110px;
+    /* right: 267px;
         top: 12px; */
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 100;
-        font-size: 90px;
-        line-height: 48px;
-        text-align: center;
-        color: #000000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 90px;
+    line-height: 48px;
+    text-align: center;
+    color: #000000;
 }
+
 /* .top-right-1-text:hover {
     transform: scale(0.9);
     transition-duration: 0.7s;
 } */
-.top-right-2{
+.top-right-2 {
     position: absolute;
-        width: 240px;
-        height: 24px;
-        right: 55px;
-        top: 69px;
-    
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 100;
-        font-size: 20px;
-        line-height: 24px;
-        text-align: center;
-    
-        color: rgba(0, 0, 0, 0.3);
+    width: 240px;
+    height: 24px;
+    right: 55px;
+    top: 69px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    color: rgba(0, 0, 0, 0.3);
 
 }
-.content{
+
+.content {
     width: 100%;
     margin: auto;
     height: 948px;
     /* background-image: linear-gradient(to bottom, #ffffff, #9fbfd6, #427da7); */
     background-repeat: no-repeat;
     background-size: 100% auto;
-   
-    
-   
+
+
+
 }
+
 /* .name{
     position: absolute;
         width: 96px;
@@ -239,8 +248,8 @@ select{
     
         background: #D9D9D9;
 }   */
-.cause{
-    display:inline-block;
+.cause {
+    display: inline-block;
     width: 192px;
     height: 58px;
     left: 533px;
@@ -248,14 +257,15 @@ select{
     padding-left: 50px;
     padding-right: 50px;
     font-family: 'Inter';
-    font-style:300;
+    font-style: 300;
     font-weight: bold;
     font-size: 48px;
     line-height: 58px;
     text-align: center;
     color: black;
 }
-.cause-text{
+
+.cause-text {
     padding-left: 20px;
     width: 463px;
     height: 60px;
@@ -264,45 +274,48 @@ select{
     background-color: transparent;
     background: #D9D9D9;
 }
-.date{
 
-    display:inline-block;
-        width: 192px;
-        height: 60px;
-        left: 533px;
-        top: 574px;
-        padding-left: 50px;
-      padding-right: 50px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: bold;
-        font-size: 48px;
-        line-height: 60px;
-        /* identical to box height */
-    
-        text-align: center;
-    
-        color:black;
+.date {
+
+    display: inline-block;
+    width: 192px;
+    height: 60px;
+    left: 533px;
+    top: 574px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: black;
 }
 
-.confirm{
-   
-    position:absolute;
-        width: 250px;
-        height: 96px;
-        left: 50%;
-        margin-left: -125px;
-        top: 824px;
-        background: #604242;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 100;
-        font-size: 48px;
-        color: white;
-        
-      transition: all 1.5s;
-      
+.confirm {
+
+    position: absolute;
+    width: 250px;
+    height: 96px;
+    left: 50%;
+    margin-left: -125px;
+    border-radius: 10px;
+    top: 824px;
+    background: #01396c;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 48px;
+    color: white;
+
+    transition: all 1.5s;
+
 }
+
 button:hover {
     cursor: pointer;
     background-color: #ffffff;
@@ -311,17 +324,19 @@ button:hover {
     transform: scale(0.9);
     transition-duration: 0.7s;
 }
-#date-text{
+
+#date-text {
     display: inline-block;
     width: 220px;
     height: 60px;
     opacity: 0.9;
     font-size: 30px;
     background: #D9D9D9;
-   padding-left: 10px;
+    padding-left: 10px;
     line-height: 60px;
 }
-#date-text1{
+
+#date-text1 {
     margin-left: 50px;
     width: 200px;
     height: 60px;
@@ -329,30 +344,32 @@ button:hover {
     font-size: 30px;
     font-weight: 100;
     opacity: 0.9;
-    
-        
+
+
 
 }
-#time{
-   
+
+#time {
+
     display: inline-block;
     width: auto;
 
     height: 50px;
     font-size: 30px;
 }
-  
-   input[type="datetime-local"] ::-webkit-datetime-edit-day-field{
+
+input[type="datetime-local"] ::-webkit-datetime-edit-day-field {
     font-size: 80px;
     width: 80px;
     height: 800px;
-   }
-        input[type="datetime-local"]   ::-webkit-datetime-edit-year-field{
-            display: inline-block;
-            font-size: 38px;
-        }
+}
 
-.centerhh{
+input[type="datetime-local"] ::-webkit-datetime-edit-year-field {
+    display: inline-block;
+    font-size: 38px;
+}
+
+.centerhh {
     position: absolute;
     height: 60px;
     width: 1000px;
@@ -361,6 +378,7 @@ button:hover {
     left: 0px;
     margin: auto;
 }
+
 .centerh {
     position: absolute;
     height: 60px;
@@ -370,7 +388,7 @@ button:hover {
     left: 0px;
     margin: auto;
 }
-    
+
 /* .confirm-again{
     position: fixed;
     left: 50%;
