@@ -1,6 +1,7 @@
 /* 头部部分 */
 *{
     margin: 0;
+    padding: 0;
 }
 a{
     text-decoration: none;
@@ -17,7 +18,7 @@ select{
     border-radius: 10px;
 }
 .all{
-    width: 98vw;
+    width: 100vw;
     height: 52vw;
     opacity: 0.95;
     margin:  0 auto;
@@ -312,12 +313,12 @@ button:hover {
 }
 #date-text{
     display: inline-block;
-    width: 230px;
+    width: 220px;
     height: 60px;
     opacity: 0.9;
     font-size: 30px;
     background: #D9D9D9;
-   
+   padding-left: 10px;
     line-height: 60px;
 }
 #date-text1{
@@ -336,6 +337,7 @@ button:hover {
    
     display: inline-block;
     width: auto;
+
     height: 50px;
     font-size: 30px;
 }
