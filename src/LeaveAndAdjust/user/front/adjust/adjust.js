@@ -8,6 +8,10 @@ var change = (number) => {
     return result;
 }
 
+
+localStorage.setItem('idd', `${id}`);
+
+
 //判断时间是否合理
 var judged = (judge,date) => {
     var dated = new Date();
@@ -87,21 +91,31 @@ function isconfirm() {
     if (index && indexd) {
         axios({
             method: 'post',
-            url: 'http://6xa4kvxq.shenzhuo.vip:47020/excused/',
-            headers: { "Content-type": "application/json" },
+            url: 'https://zkr.shenzhuo.vip/user/ask_change',
+            headers: {
+                "Content-type": "application/json",
+                   },
             data: {
-                reason: `${cause}`,
+                user_id:`${idd}`,
+                change_reason: `${cause}`,
                 old_date: `${from}`,
                 new_date: `${to}`,
-                old_time: `${number1}`,
-                new_time:`${number2}`
+                old_class: `${result1}`,
+                new_class:`${result2}`
             }
 
-        }).then((res) => { console.log(res.data); })
-        alert("成功调整");
+        }).then((res) => {
+            console.log(res.data);
+            if (res.status == 200) {
+                alert("调整成功");
+            }
+        }).catch(error => {
+            alert(error.response.data);
+
+})
+       
         console.log("已成功调整");
-        console.log(number1);
-        console.log(number2);
+        
 
         
     }

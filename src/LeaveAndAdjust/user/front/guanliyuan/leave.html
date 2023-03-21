@@ -10,6 +10,7 @@
        
         .all {
             width: 1920px;
+            height: auto;
             margin: auto;
             background-image: linear-gradient(to bottom, #6190E8, #A7BFE8);
 
@@ -42,10 +43,31 @@
             font-size: 36px;
 
         }
+button {
+    margin-top: 20px;
+    width: 200px;
+    height: 81px;
+    border-radius: 10px;
+    margin-left: 30px;
+    font-size: 45px;
+    font-weight: 500;
+    color: white;
+    background-color: #01396c;
+}
 
+button:hover {
+    
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #01396c;
+    border: solid 5px #01396c;
+    transform: scale(0.9);
+    transition-duration: 0.7s;
+}
         .Main {
                  border: 5px solid #2f90b9;
             border-top: none;
+            height: auto;
             width: 1910px;
             /* background-color: #96c24e; */
         }
@@ -90,7 +112,8 @@
 <body>
     <div class="all">
         <div class="top">
-            <div class="top-1">当前</div>
+            <button onclick="change()">切换</button>
+            <div class="top-1"></div>
             <div class="top-2">请假情况</div>
 
         </div>
@@ -101,8 +124,8 @@
                         <th>姓名</th>
                         <th>方向</th>
                         <th>请假时间</th>
+                        <th>请假节数</th>
                         <th>请假原因</th>
-                        <th>请假次数</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -112,8 +135,8 @@
         </div>
     </div>
 </body>
-<script src="./leave.js">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./leave.js"></script>
 
-</script>
 
 </html>

@@ -15,6 +15,7 @@ var change = (number) => {
     else { result = 4; }
     return result;
 }
+localStorage.setItem('idd', `${id}`);
 
 //判断时间是否合理：
 var judged = (judge) => {
@@ -84,35 +85,52 @@ function isconfirm(){
     
     if (index&&indexd) {
         axios({
-            headers: { "Content-type": "application/json" },
+            headers: {
+                "Content-type": "application/json",
+            },
             method: 'post',
-            url: 'http://6xa4kvxq.shenzhuo.vip:47020/excused/',
+            url: 'https://zkr.shenzhuo.vip/user/ask_leave',
             data: {
-               reason: `${cause}`,
-                new_date: `${date}`,
-                new_time:`${number}`
+                user_id: `${idd}`,
+                leave_reason: `${cause}`,
+                leave_date: `${date}`,
+                leave_class: `${resulted}`,
             }
           
-        }).then((res) => { console.log(res.data); })
-        alert("成功请假");
-        console.log("已成功请假");
-        console.log(number);
-        console.log(date);
-        console.log(resulted);
+        }).then((res) => {
+            console.log(res.data);
+            if (res.status === 200) {
+                alert("请假成功");
+            }
+            // alert(res.data);
+            // if (res.data != "未查询到研学信息") {
+            //     alert("成功请假");
+            //     console.log("已成功请假");
+            // }
+            // else {
+            //     alert("为查询到研学信息，请重新确认");
+            // }
+        }).catch(function (error) {
+           
+            alert(error.response.data);
+           
+        })
+       
+       
 
         
     }
-    if (index&&indexd) {
-        axios({
-            headers: { "Content-type": "application/json" },
-            method: 'get',
-            url: 'http://6xa4kvxq.shenzhuo.vip:47020/api/getdata/'
-
-
-        }).then((res) => { console.log(res.data.username); })
+    // if (index&&indexd) {
+    //     axios({
+    //         headers: { "Content-type": "application/json" },
+    //         method: 'get',
+    //         url: 'http://6xa4kvxq.shenzhuo.vip:47020/api/getdata/'
+    //     }).then((res) => {
+    //         console.log(res.data.username);
+    //     })
         
 
-    }
+    // }
 };
 
          

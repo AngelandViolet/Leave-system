@@ -7,11 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>管理员调整研学端</title>
     <style>
+       button {
+        
+        margin-top: 20px;
+        margin-right: 50px;
+        left: 50px;
+    width: 200px;
+    height: 81px;
+    border-radius: 10px;
+    margin-left: 30px;
+    font-size: 45px;
+    font-weight: 500;
+    color: white;
+    background-color: #01396c;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #01396c;
+    border: solid 5px #01396c;
+    transform: scale(0.9);
+    transition-duration: 0.7s;
+}
         .all{
             width: 1920px;
             margin: auto;
             background-image: linear-gradient(to bottom, #6190E8, #A7BFE8);
-            
+            height: auto;
         }
         .top{
             position: relative;
@@ -22,14 +45,7 @@
             
 
         }
-        .top-1{
-                position: absolute;
-                top:30px;
-                left: 160px;
-                 font-size: 36px;
-                
-
-        }
+        
         .top-2{
              position: absolute;
                 top:30px;
@@ -39,6 +55,7 @@
         }
         .Main {
             border: 5px solid #2f90b9;
+            height: auto;
             border-top: none;
     width: 1910px;
     
@@ -84,7 +101,8 @@ td {
 <body>
     <div class="all">
     <div class="top">
-        <div class="top-1">当前</div>
+       <button onclick="change()">切换</button>
+        <div class="top-1"></div>
         <div class="top-2">调整研学情况</div>
 
     </div>
@@ -106,6 +124,8 @@ td {
     </div>
     </div>
 </body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./adjust.js"></script>
+
 
 </html>

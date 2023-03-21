@@ -16,6 +16,7 @@ a {
    
 
 }
+
 a:hover {
     color: blue;
 }
@@ -230,7 +231,8 @@ font-weight: bold;
 #date-from-text{
     display: inline-block;
         margin-left: 50px;
-        width: 230px;
+        width: 220px;
+        padding-left: 10px;
         height: 60px;
         left: 923px;
         top: 377px;
@@ -285,7 +287,8 @@ font-weight: bold;
 #date-to-text{
     margin-left: 50px;
     display: inline-block;
-        width: 230px;
+    padding-left: 10px;
+        width: 220px;
         height: 60px;
         left: 923px;
         top: 512px;
@@ -374,3 +377,13 @@ button:hover {
     color: #FFFAFA;
 
 }
+
+
+
+
+
+
+
+
+
+
