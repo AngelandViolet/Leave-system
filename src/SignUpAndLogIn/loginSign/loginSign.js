@@ -63,7 +63,7 @@ var SignIn_StudentID = document.getElementById('SignIn_StudentID');
 var SignIn_password = document.getElementById('SignIn_password');
 
 // 用户登录界面
-function login() {
+function stu_login() {
     if (SignIn_StudentID.value =='') {
         alert("请输入账号");
     }
@@ -200,14 +200,14 @@ function login() {
             "manager_pass": `${SignIn_password.value}`,
         }
     }).then(res => {
-			if(res.status==200)
+			if(res.status==203)
 			{
                 alert("登录成功")
                 //此处跳转至管理端
                 window.location.href = "   ";
                 localStorage.setItem('id', `${SignIn_StudentID.value}`);
 			}
-			else if(res.status==201)
+			else if(res.status==204)
 			{
 				alert("账号或密码错误,请重新输入")
 			}
