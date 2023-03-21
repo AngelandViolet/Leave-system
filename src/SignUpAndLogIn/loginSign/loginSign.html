@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,10 @@
     <link rel="stylesheet" href="loginSign.css">
     <title>请假调整研学系统</title>
 </head>
+
 <body style="overflow:hidden">
-    <img src="https://lmy-2.oss-cn-beijing.aliyuncs.com/9862A9BCBB5FAF122B15198E52694609%20%E6%8B%B7%E8%B4%9D(1).png" alt="" id="logo_Y">
+    <img src="https://lmy-2.oss-cn-beijing.aliyuncs.com/9862A9BCBB5FAF122B15198E52694609%20%E6%8B%B7%E8%B4%9D(1).png"
+        alt="" id="logo_Y">
     <div class="container">
         <!-- 登录界面 -->
         <div class="container__form container--signin">
@@ -26,25 +29,28 @@
         <div class="container__form container--signup">
             <form action="#" class="SignUp_form" id="SignUp_form">
                 <h2 class="form__title" id="form__title">注册</h2>
-                <div class="div">姓名：<input type="text" id="name" onkeyup="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" class="SignUp_input"></div>
+                <div class="div">姓名：<input type="text" id="name" onkeyup="value=value.replace(/[^\u4E00-\u9FA5]/g,'')"
+                        class="SignUp_input"></div>
                 <div class="div">方向：<select id="direction" class="SignUp_input">
-                    <option selected="selected" disabled="disabled" style='display: none' value=''></option>
-                    <option>人工智能</option>
-                    <option>CPU&OS</option>
-                    <option>Java</option>
-                    <option>全栈</option>
-                    <option>设计</option>
-                    <option>秘书处</option>
-                </select></div>
+                        <option selected="selected" disabled="disabled" style='display: none' value=''></option>
+                        <option>人工智能</option>
+                        <option>CPU&OS</option>
+                        <option>Java</option>
+                        <option>全栈</option>
+                        <option>设计</option>
+                        <option>秘书处</option>
+                    </select></div>
                 <div class="div">期数：<input type="text" id="NumberOfPeriods" class="SignUp_input"></div>
-                <div class="div">账号：<input type="text" placeholder="请输入学号" id="SignUp_StudentID" onkeyup="value=value.replace(/[^\d]/g,'')" class="SignUp_input"></div>
+                <div class="div">账号：<input type="text" placeholder="请输入学号" id="SignUp_StudentID"
+                        onkeyup="value=value.replace(/[^\d]/g,'')" class="SignUp_input"></div>
                 <img src="https://lmy-2.oss-cn-beijing.aliyuncs.com/yanjing-bi.png" alt="" id="SignUp_eye" class="eye">
                 <div class="div">密码：<input type="password" id="SignUp_password" class="SignUp_input"></div>
-                <div class="div">内部邀请码：<input type="text" id="InvitationCode" placeholder="请输入邀请码" class="SignUp_input"></div>
+                <div class="div">内部邀请码：<input type="text" id="InvitationCode" placeholder="请输入邀请码" class="SignUp_input">
+                </div>
                 <button class="btn" id="SignUp_btn" onclick="sign()">注册</button>
             </form>
         </div>
-        
+
         <!-- Overlay -->
         <div class="container__overlay">
             <div class="overlay">
@@ -62,4 +68,5 @@
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="loginSign.js"></script>
+
 </html>

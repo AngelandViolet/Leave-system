@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserPersonalWeb</title>
+    <link rel="stylesheet" href="./User.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.2.3/axios.js"></script>
+</head>
+
+<body>
+    <div class="Personal">
+        <div class="Top">
+            <a href="C:\\Users\\麻花几路\\Desktop\\front\\leave\\leave.html" target="_blank"><button>返回</button></a>
+            <div class="username">姓名：<span id="username"></span></div>
+            <div class="direction">方向：<span id="direction"></span></div>
+            <div class="grade">期数：<span id="grade"></span></div>
+            <div id="header" class="iconfont">&#xe679;</div>
+        </div>
+        <div class="Main">
+            <table class="leave_table">
+                <thead>
+                    <tr>
+                        <th class="iconfont">请假时间<span class="sort">&#xe60f;</span></th>
+                        <th>请假原因</th>
+                    </tr>
+                </thead>
+                <tbody class="leave_tbody">
+                    <tr id="tr"></tr>
+                </tbody>
+            </table>
+            <table class="change_table">
+                <thead>
+                    <tr>
+                        <th class="iconfont">调整前时间<span class="sort">&#xe60f;</span></th>
+                        <th>调整后时间</th>
+                        <th>调整原因</th>
+                    </tr>
+                <tbody class="change_tbody">
+                    <tr id="tr"></tr>
+                </tbody>
+                </thead>
+            </table>
+            <!-- <button id="cancel">撤销</button> -->
+        </div>
+        <script src="./User.js"></script>
+    </div>
+</body>
+
+</html>

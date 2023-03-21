@@ -15,7 +15,7 @@ var change = (number) => {
     else { result = 4; }
     return result;
 }
-localStorage.setItem('idd', `${id}`);
+let user_id =  localStorage.getItem('user_id');
 
 //判断时间是否合理：
 var judged = (judge) => {
@@ -91,7 +91,7 @@ function isconfirm(){
             method: 'post',
             url: 'https://zkr.shenzhuo.vip/user/ask_leave',
             data: {
-                user_id: `${idd}`,
+                user_id: `${user_id}`,
                 leave_reason: `${cause}`,
                 leave_date: `${date}`,
                 leave_class: `${resulted}`,

@@ -9,7 +9,7 @@ var change = (number) => {
 }
 
 
-localStorage.setItem('idd', `${id}`);
+let user_id = localStorage.getItem('user_id');
 
 
 //判断时间是否合理
@@ -96,7 +96,7 @@ function isconfirm() {
                 "Content-type": "application/json",
             },
             data: {
-                user_id: `${idd}`,
+                user_id: `${user_id}`,
                 change_reason: `${cause}`,
                 old_date: `${from}`,
                 new_date: `${to}`,

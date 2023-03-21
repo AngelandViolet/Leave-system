@@ -6,11 +6,11 @@ const container = document.querySelector(".container");
 
 
 signInBtn.addEventListener("click", () => {
-	container.classList.remove("right-panel-active");
+    container.classList.remove("right-panel-active");
 });
 
 signUpBtn.addEventListener("click", () => {
-	container.classList.add("right-panel-active");
+    container.classList.add("right-panel-active");
 });
 
 console.log(fistForm)
@@ -64,11 +64,11 @@ var SignIn_password = document.getElementById('SignIn_password');
 
 // 用户登录界面
 function stu_login() {
-    if (SignIn_StudentID.value =='') {
+    if (SignIn_StudentID.value == '') {
         alert("请输入账号");
     }
-    
-    else if (SignIn_password.value =='') {
+
+    else if (SignIn_password.value == '') {
         alert("请输入密码");
     }
     axios({
@@ -77,7 +77,7 @@ function stu_login() {
     }).then(res => {
         alert('登录成功')
         //跳转至请假界面
-        window.location.href = "   ";
+        window.location.href = "C:\\Users\\麻花几路\\Desktop\\研学请假系统\\src\\LeaveAndAdjust\\user\\front\\leave\\leave.html";
         localStorage.setItem('id', `${SignIn_StudentID.value}`);
     }).catch(err => {
         console.log(err.response.status)
@@ -86,32 +86,29 @@ function stu_login() {
                 url: '/user/user_log',
                 method: 'POST',
                 data: {
-                "user_id":`${SignIn_StudentID.value}`,
-                "user_pass": `${SignIn_password.value}`,
+                    "user_id": `${SignIn_StudentID.value}`,
+                    "user_pass": `${SignIn_password.value}`,
                 }
             })
-		.then(res => {
-			if(res.status==200)
-			{
-                alert("登录成功")
-                // console.log(res)
-                // console.log(document.cookie)
-                //跳转至请假界面
-                window.location.href = "   ";
-                localStorage.setItem('id', `${SignIn_StudentID.value}`);
-			}
-			else if(res.status==201)
-			{
-				alert("密码错误,请重新输入")
-			}
-			else if(res.status==202)
-			{
-				alert("用户不存在,请重新输入")
-			}
-		})
+                .then(res => {
+                    if (res.status == 200) {
+                        alert("登录成功")
+                        // console.log(res)
+                        // console.log(document.cookie)
+                        //跳转至请假界面
+                        window.location.href = ":\\Users\\麻花几路\\Desktop\\研学请假系统\\src\\LeaveAndAdjust\\user\\front\\leave\\leave.html";
+                        localStorage.setItem('id', `${SignIn_StudentID.value}`);
+                    }
+                    else if (res.status == 201) {
+                        alert("密码错误,请重新输入")
+                    }
+                    else if (res.status == 202) {
+                        alert("用户不存在,请重新输入")
+                    }
+                })
         }
-        })
-    
+    })
+
 }
 
 
@@ -158,27 +155,27 @@ function sign() {
     }
     else {
         axios({
-        url: '/user/user_sign',
-        method: 'POST',
-        headers: { "Content-type": "application/json" },
-        data: {
-            "user_name":`${name.value}`,
-            "user_sector":`${direction.value}`,
-            "user_period":`${NumberOfPeriods.value}`,
-            "user_id":`${SignUp_StudentID.value}`,
-            "user_pass":`${SignUp_password.value}`,
-            "invitation_code":`${InvitationCode.value}`
-        }
-    })
-            .then((res) => {  
-                if (res.status == 200){
+            url: '/user/user_sign',
+            method: 'POST',
+            headers: { "Content-type": "application/json" },
+            data: {
+                "user_name": `${name.value}`,
+                "user_sector": `${direction.value}`,
+                "user_period": `${NumberOfPeriods.value}`,
+                "user_id": `${SignUp_StudentID.value}`,
+                "user_pass": `${SignUp_password.value}`,
+                "invitation_code": `${InvitationCode.value}`
+            }
+        })
+            .then((res) => {
+                if (res.status == 200) {
                     alert("注册完成！");
                     container.classList.remove("right-panel-active");
                 }
                 if (res.status != 200) {
                     alert("邀请码错误，请重新输入");
                 }
-    })
+            })
     }
 }
 
@@ -188,7 +185,7 @@ function login() {
     if (SignIn_StudentID.value == '') {
         alert("请输入账号");
     }
-    
+
     else if (SignIn_password.value == '') {
         alert("请输入密码");
     }
@@ -196,20 +193,18 @@ function login() {
         url: '/manager/manager_log',
         method: 'POST',
         data: {
-            "manager_id":`${SignIn_StudentID.value}`,
+            "manager_id": `${SignIn_StudentID.value}`,
             "manager_pass": `${SignIn_password.value}`,
         }
     }).then(res => {
-			if(res.status==203)
-			{
-                alert("登录成功")
-                //此处跳转至管理端
-                window.location.href = "   ";
-                localStorage.setItem('id', `${SignIn_StudentID.value}`);
-			}
-			else if(res.status==204)
-			{
-				alert("账号或密码错误,请重新输入")
-			}
-		})
+        if (res.status == 203) {
+            alert("登录成功")
+            //此处跳转至管理端
+            window.location.href = "   ";
+            localStorage.setItem('id', `${SignIn_StudentID.value}`);
+        }
+        else if (res.status == 204) {
+            alert("账号或密码错误,请重新输入")
+        }
+    })
 }
