@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员请假端</title>
+    <style>
+        * {
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            width: auto;
+            height: auto;
+            background-color: #9fbfd6;
+        }
+
+        .all {
+            width: 96vw;
+            height: 52vw;
+            margin: 0 auto;
+            box-shadow: 0 0 30px 20px rgba(0, 0, 0, .3);
+            background-image: linear-gradient(to bottom, #ffffff, #9fbfd6, #427da7);
+        }
+
+        .top {
+            position: relative;
+            width: auto;
+            height: 120px;
+            margin: auto 0;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .top-1 {
+            position: absolute;
+            top: 30px;
+            left: 160px;
+            font-size: 36px;
+        }
+
+        .top-2 {
+            position: absolute;
+            top: 30px;
+            left: 460px;
+            font-size: 36px;
+
+        }
+
+        button {
+            margin-top: 20px;
+            width: 200px;
+            height: 81px;
+            border-radius: 10px;
+            margin-left: 30px;
+            font-size: 45px;
+            font-weight: 500;
+            color: white;
+            background-color: #01396c;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #ffffff;
+            color: #01396c;
+            border: solid 5px #01396c;
+            transform: scale(0.9);
+            transition-duration: 0.7s;
+        }
+
+        .Main {
+            border-top: none;
+            height: auto;
+            width: auto;
+        }
+
+        table {
+            height: 800px;
+            width: 1500px;
+            margin: auto 0;
+            margin-top: 30px;
+            max-height: 800px;
+            font-size: 36px;
+        }
+
+        thead tr {
+            display: block;
+            width: 1500px;
+        }
+
+        tbody {
+            display: block;
+            width: 1500px;
+            height: 750px;
+            max-height: 750px;
+            overflow: auto;
+        }
+
+        th {
+            width: 300px;
+            height: 45px;
+            text-align: center;
+        }
+
+        td {
+            width: 300px;
+            height: 45px;
+            border: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="top">
+            <a href="./adjust.html"><button>切换</button></a>
+            <div class="top-1"></div>
+            <div class="top-2">请假情况</div>
+
+        </div>
+        <div class="Main">
+            <table>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>方向</th>
+                        <th>请假时间</th>
+                        <th>请假节数</th>
+                        <th>请假原因</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="tr"></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./leave.js"></script>
+
+
+</html>

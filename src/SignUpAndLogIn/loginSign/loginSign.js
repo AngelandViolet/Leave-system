@@ -77,7 +77,7 @@ function stu_login() {
     }).then(res => {
         alert('登录成功')
         //跳转至请假界面
-        window.location.href = "C:\\Users\\麻花几路\\Desktop\\研学请假系统\\src\\LeaveAndAdjust\\user\\front\\leave\\leave.html";
+        window.location.href = "../../LeaveAndAdjust/user/front/leave/leave.html";
         localStorage.setItem('id', `${SignIn_StudentID.value}`);
     }).catch(err => {
         console.log(err.response.status)
@@ -96,7 +96,7 @@ function stu_login() {
                         // console.log(res)
                         // console.log(document.cookie)
                         //跳转至请假界面
-                        window.location.href = ":\\Users\\麻花几路\\Desktop\\研学请假系统\\src\\LeaveAndAdjust\\user\\front\\leave\\leave.html";
+                        window.location.href = "../../LeaveAndAdjust/user/front/leave/leave.html";
                         localStorage.setItem('id', `${SignIn_StudentID.value}`);
                     }
                     else if (res.status == 201) {
@@ -190,7 +190,7 @@ function login() {
         alert("请输入密码");
     }
     axios({
-        url: '/manager/manager_log',
+        url: 'https://zkr.shenzhuo.vip/manager/manager_log',
         method: 'POST',
         data: {
             "manager_id": `${SignIn_StudentID.value}`,
@@ -200,7 +200,7 @@ function login() {
         if (res.status == 203) {
             alert("登录成功")
             //此处跳转至管理端
-            window.location.href = "   ";
+            window.location.href = "C:\\Users\\麻花几路\\Desktop\\研学请假系统\\src\\LeaveAndAdjust\\user\\front\\guanliyuan\\leave.html";
             localStorage.setItem('id', `${SignIn_StudentID.value}`);
         }
         else if (res.status == 204) {
